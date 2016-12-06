@@ -1,0 +1,198 @@
+html, body{
+	margin:0;
+	padding:0;
+	border:0;
+	width: 100%;
+	height: 100%;
+    color: #333333;
+    font-family:Arial, Helvetica, sans-serif;
+	background-color:#222;
+}
+body {
+	overflow: hidden;
+}
+.tbox {position:absolute; display:none; padding:14px 17px; z-index:100010;}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(tiny/images/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {position:absolute; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:100010}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background:url(tiny/images/close.png) no-repeat}
+.tclose:hover {background-position:0 -30px}
+
+#error {background:#ff6969; color:#fff; text-shadow:1px 1px #cf5454; border-right:1px solid #000; border-bottom:1px solid #000; padding:0}
+#error .tcontent {padding:10px 14px 11px; border:1px solid #ffb8b8; -moz-border-radius:5px; border-radius:5px}
+#success {background:#2ea125; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:0; border-radius:0}
+#markerpopup {background:#DDD; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:5px; border-radius:5px;}
+#hellopopup {background:#DDD; color:#000; font-weight:bold; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:5px; border-radius:5px; overflow: auto;}
+#aboutpopup {background:#DDD; color:#000; font-weight:bold; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:5px; border-radius:5px; overflow: auto;}
+#listpopup {background:#DDD; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:0; border-radius:0; overflow: auto;}
+#layerpopup {background:#DDD; color:#fff; text-shadow:1px 1px #1b6116; border-right:1px solid #000; border-bottom:1px solid #000; padding:10; -moz-border-radius:5px; border-radius:5px;}
+#bluemask {background:#4195aa}
+#frameless {padding:0}
+#frameless .tclose {left:6px}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+.markerTitle {
+	z-index: 110;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #BBBBBB;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    visibility: hidden;
+}
+mlink{
+	cursor: pointer;
+}
+.leftbottom{
+	z-index:100000;
+	width:32px;
+	height:32px;
+	position: fixed;
+	bottom: 4%;
+	left: 4%;
+	cursor: pointer;
+}
+.rightbottom{
+	z-index:100000;
+	width:52px;
+	height:54px;
+	position: fixed;
+	bottom: 4%;
+	right: 4%;
+	cursor: pointer;
+}
+.lefttop{
+	z-index:100000;
+	width:32px;
+	height:64px;
+	position: fixed;
+	top: 4%;
+	left: 4%;
+	cursor: pointer;
+}
+.righttop{
+	z-index:100000;
+	width:32px;
+	height:32px;
+	position: fixed;
+	top: 4%;
+	right: 4%;
+	cursor: pointer;
+}
+
+
+li { 
+	list-style-type: none;
+	list-style-image: none;
+	border-left: solid #CCC 5px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-bottom:20px;
+}
+.hr {
+	display:block;
+	border-bottom:1px solid #ccc;
+	margin-left:10px;
+	margin-right:14px;
+	margin-top:10px;
+}
+.metro {
+	border-left-color: #E00914;
+	margin: 0 !important;
+}
+.tramvay {
+	border-left-color: #943A3C;
+	margin: 0 !important;
+}
+.finukuler {
+	border-left-color: #F0DA18;
+	margin: 0 !important;
+}
+.metrobus {
+	border-left-color: #9b9bb3;
+	margin: 0 !important;
+}
+.vapur {
+		border-left-color: #003566;
+		margin: 0 !important;
+}
+.listHat img {
+	vertical-align: middle;
+    padding-right: 6px;
+}
+.listHat {
+	font-size:12px;
+	color:#999;
+	display:block;
+}
+.listDurak {
+	font-size:20px;
+	font-weight:bold;
+	color:#666;
+	display:block;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left : 32px;
+}
+.listIcons {
+	display:block;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left : 32px;
+}
+.listIcons img{
+	padding-right: 5px;
+}
+.listDesc {
+	margin-left: 32px;
+	font-size:12px;
+	color:#999;
+	display:block;
+}
+#listdiv{
+	width:80%;
+	margin-left: 15px;	
+}
+
+
+
+input[type="checkbox"] {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type="checkbox"]:checked + label{
+    background-position: 0 -15px;
+}
+input[type="checkbox"] + label{
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 20px;
+    vertical-align: middle;
+	background-image: url("icon/dark-check-green.png");
+}
+input[type="text"] {
+	background: url("icon/search-white.png") no-repeat scroll 10px 6px #FCFCFC;
+    border: 1px solid #D1D1D1;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    color: #BEBEBE;
+    padding: 6px 15px 6px 35px;
+    width: 80%;
+}

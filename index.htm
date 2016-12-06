@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" CONTENT="Beyaz Yakalılar Bişi Yapsa, İstanbul Hepimizin Ulaşım Haritası, beyaz yakalilar">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>İstanbul Hepimizin Ulaşım Haritası</title>
+<link rel="stylesheet" href="map.css" type="text/css">
+<script src="ol/OpenLayers.js"></script>
+<script src="index.js"></script>
+<script src="data.js"></script>
+<script src="map.js"></script>
+<script src="tiny/tinybox.js"></script>
+</head>
+<body onload="BYBY.init();">
+<div id="map" class="map"></div>
+<!--div id="markerTitle" class="markerTitle">Titles</div>-->
+<div id="lefttopdiv" class="lefttop">
+<div onclick="BYBY.map.zoomIn();"><img style="width:32px; height:32px" src="icon/bgzoomin.png"></div>
+<div onclick="BYBY.map.zoomOut();"><img style="width:32px; height:32px" src="icon/bgzoomout.png"></div>
+</a>
+</div>
+<div id="righttopdiv" class="righttop" onclick="BYBY.showTOC();">
+<img style="width:100%; height:100%" src="icon/bgkatman.png">
+</div>
+<div id="leftbottomdiv" class="leftbottom" onclick="BYBY.addList();">
+<!--<a href="list.html">-->
+<img style="width:100%; height:100%" src="icon/bglist.png">
+<!--</a>-->
+</div>
+<div id="rightbottomdiv" class="rightbottom" onclick="BYBY.about();">
+<!--<a href="http://www.beyazyakalilarbisiyapsa.com/">-->
+<img style="width:100%; height:100%" src="icon/logo_orj.png">
+<!--</a>-->
+</div>
+</body>
+</html>
